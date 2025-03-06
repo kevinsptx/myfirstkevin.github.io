@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de Datos - Video Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>¡Explora el Mundo de las Bases de Datos!</h1>
+            <p>Gestión de datos de la Video Tienda con eficiencia y estilo</p>
+        </header>
+
+        <section class="content">
+            <h2>¿Qué es una Base de Datos?</h2>
+            <p>Una base de datos es un conjunto de datos organizados para facilitar su acceso y manipulación.</p>
+
+            <h3>Relaciones entre Tablas</h3>
+            <p>Las relaciones entre tablas pueden ser:</p>
+            <ul>
+                <li><strong>Uno a Uno (1:1)</strong>: Un registro se asocia con solo uno de otra tabla.</li>
+                <li><strong>Uno a Muchos (1:M)</strong>: Un registro se asocia con varios de otra tabla.</li>
+                <li><strong>Muchos a Muchos (N:M)</strong>: Varios registros de una tabla se asocian con varios de otra.</li>
+            </ul>
+            <h3>Modelo de Datos</h3>
+            <p>El Modelo Entidad-Relación (MER) representa las entidades y relaciones, y el Modelo Relacional las convierte en tablas con claves primarias y foráneas.</p>
+
+            <h3>Ejemplo Práctico</h3>
+            <p>En la video tienda, un socio puede alquilar varias películas, y una película puede ser alquilada por varios socios. Esto se maneja con una tabla intermedia llamada ALQUILER.</p>
+        </section>
+    </div>
+</body>
+</html>
+

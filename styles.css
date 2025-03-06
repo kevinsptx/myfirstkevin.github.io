@@ -1,0 +1,109 @@
+/* Fondo de la página con imagen y estrellas saturadas */
+body {
+    background: url('https://i.imgur.com/WhR5vvW.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    filter: saturate(1.5);  /* Saturación de colores */
+}
+
+/* Contenedor principal con efecto de sombra */
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    position: relative;
+}
+
+/* Cabecera con el texto de bienvenida */
+.header h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+    color: #ffdd57;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
+}
+
+.header p {
+    font-size: 1.6rem;
+    color: #ff61a6;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Contenido centrado y resaltado */
+.content h2 {
+    font-size: 2.5rem;
+    color: #72d1f9;
+    margin: 20px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.content h3 {
+    font-size: 2rem;
+    color: #f5b400;
+    margin: 15px 0;
+}
+
+.content p, .content ul {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin: 10px 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para la lista sin puntos */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+/* Estilo para el fondo con estrellas y Snoopy */
+@keyframes stars {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('imagenes/snupi.jfif') repeat;
+    opacity: 0.4;
+    animation: stars 30s linear infinite;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: url('imagenes/snupi.jfif') no-repeat center center;
+    background-size: contain;
+    animation: rotateSnoopy 30s linear infinite;
+}
+
+@keyframes rotateSnoopy {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
